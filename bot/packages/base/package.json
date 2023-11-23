@@ -1,0 +1,29 @@
+{
+	"name": "base",
+	"version": "1.0.0",
+	"description": "The basic package of bots.",
+	"keywords": [
+		"discord.js",
+		"JavaScript",
+		"Node.js"
+	],
+	"homepage": "https://github.com/YokePo/discord-bot#readme",
+	"bugs": {
+		"url": "https://github.com/YokePo/discord-bot/issues"
+	},
+	"license": "ISC",
+	"author": "YokePo0309",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YokePo/discord-bot.git"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"shared-packages": "1.0.0"
+	},
+	"private": true
+}
