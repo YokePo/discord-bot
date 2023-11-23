@@ -5,7 +5,7 @@ A bot repository for discord that I'm working on.
 ## Used Packages
 
 - discord.js
-  `npm install discord.js`
+  <br>`npm install discord.js`
 
 ### Vesions
 
