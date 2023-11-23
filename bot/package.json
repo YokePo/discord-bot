@@ -2,15 +2,23 @@
 	"name": "bot",
 	"version": "1.0.0",
 	"description": "A bot repository for discord that I'm working on.",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"keywords": [
 		"discord.js",
 		"JavaScript",
 		"Node.js",
 		"npm workspace"
 	],
+	"license": "ISC",
 	"author": "YokePo0309",
-	"license": "ISC"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YokePo/discord-bot.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"private": true,
+	"workspaces": [
+		"packages\\*"
+	]
 }
