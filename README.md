@@ -15,7 +15,7 @@ A bot repository for discord that I'm working on.
   - Executing the following command allows you to sort.
     <br>`$ fixpack`
 
-### Vesions
+# Vesions
 
 - `Node.js` v16.14.0
 - `npm` v8.3.1
