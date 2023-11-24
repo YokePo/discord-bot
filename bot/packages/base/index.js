@@ -1,5 +1,9 @@
 'use strict';
 
+// 環境の取得
+require('dotenv').config();
+const { TOKEN } = process.env;
+
 // Discordライブラリからクラス等を読み込む
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 
@@ -28,4 +32,4 @@ client.once(Events.ClientReady, () => {
 });
 
 // Discordへ接続
-client.login("アクセストークン");
+client.login(TOKEN);
