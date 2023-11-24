@@ -4,9 +4,6 @@ A bot repository for discord that I'm working on.
 
 ## Used Packages
 
-- discord.js
-  <br>Execute the following command to install it.
-  <br>`$ npm install discord.js`
 - fixpack
   <br>You can install `fixpack` by executing the following command.
   <br>`$ npm install fixpack`
@@ -14,6 +11,14 @@ A bot repository for discord that I'm working on.
   - Create the environment variable named `FIXPACK_CONFIG` and set the file path to `.fixpackrc`.
   - Executing the following command allows you to sort.
     <br>`$ fixpack`
+- discord.js
+  <br>Execute the following command to install it.
+  <br>`$ npm install discord.js`
+- dotenv
+  <br>Execute the following command to install it.
+  <br>`$ npm install dotenv`
+  - Making a `.env` file and set your bot token.
+  - You can hide the bot token.
 
 # Vesions
 
