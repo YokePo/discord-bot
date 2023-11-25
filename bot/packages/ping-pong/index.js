@@ -4,6 +4,8 @@
 require('dotenv').config();
 const { TOKEN } = process.env;
 
+const path = require("path");
+
 // Discordライブラリからクラス等を読み込む
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 
@@ -16,6 +18,10 @@ const client = new Client({
 (() => {
     // イベントハンドラの登録上限を無くす
     client.setMaxListeners(Infinity);
+
+    // 別ファイルを読み込み、botにイベントハンドラを登録
+    const loadEventHandlers = require('../utils/loadEventHandlers');
+    loadEventHandlers(client, path.join(__dirname));
 })();
 
 // bot起動後に一度だけ機能する処理
