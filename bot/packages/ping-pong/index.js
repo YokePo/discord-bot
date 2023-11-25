@@ -4,19 +4,14 @@
 require('dotenv').config();
 const { TOKEN } = process.env;
 
+const path = require("path");
+
 // Discordライブラリからクラス等を読み込む
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 
-// botの制御用ビットフラグを取得
-const intents = GatewayIntentBits;
-
 // botのインスタンスを生成
 const client = new Client({
-    intents: [
-        intents.GuildMessages,
-        intents.GuildMessageTyping,
-        intents.MessageContent,
-    ]
+    intents: Object.values(GatewayIntentBits).reduce((a, b) => a | b)
 });
 
 // 起動前セットアップ
@@ -26,7 +21,7 @@ const client = new Client({
 
     // 別ファイルを読み込み、botにイベントハンドラを登録
     const loadEventHandlers = require('../utils/loadEventHandlers');
-    loadEventHandlers(client);
+    loadEventHandlers(client, path.join(__dirname));
 })();
 
 // bot起動後に一度だけ機能する処理

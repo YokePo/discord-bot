@@ -15,7 +15,9 @@
 		"url": "git+https://github.com/YokePo/discord-bot.git"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"base": "npm --prefix ./packages/base start",
+		"ping-pong": "npm --prefix ./packages/ping-pong start",
+		"test": "echo \"discord-bot\" && exit 1"
 	},
 	"private": true,
 	"workspaces": [

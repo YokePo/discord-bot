@@ -10,10 +10,11 @@ const path = require('path');
 const readDir = require('./readDirectory');
 
 // botのインスタンスを受け渡せるようエクスポート
-module.exports = client => {
+module.exports = (client, dir) => {
     // イベントハンドラの登録
-    readDir(path.join(__dirname, 'events'), file_path => {
+    readDir(path.join(dir, '/events'), file_path => {
         const addEventHandler = require(file_path);
         addEventHandler(client);
+        console.log(`Loaded <- ${file_path.replace(`${dir}\\`, '')}`);
     });
 };

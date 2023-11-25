@@ -7,16 +7,9 @@ const { TOKEN } = process.env;
 // Discordライブラリからクラス等を読み込む
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 
-// botの制御用ビットフラグを取得
-const intents = GatewayIntentBits;
-
 // botのインスタンスを生成
 const client = new Client({
-    intents: [
-        intents.GuildMessages,
-        intents.GuildMessageTyping,
-        intents.MessageContent,
-    ]
+    intents: Object.values(GatewayIntentBits).reduce((a, b) => a | b)
 });
 
 // 起動前セットアップ
