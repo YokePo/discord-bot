@@ -7,7 +7,7 @@
 const path = require('path');
 
 // 自作関数読み込み
-const readDir = require('./utils/readDirectory.js');
+const readDir = require('./readDirectory');
 
 // botのインスタンスを受け渡せるようエクスポート
 module.exports = client => {

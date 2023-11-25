@@ -25,7 +25,7 @@ const client = new Client({
     client.setMaxListeners(Infinity);
 
     // 別ファイルを読み込み、botにイベントハンドラを登録
-    const loadEventHandlers = require('./loadEventHandlers');
+    const loadEventHandlers = require('../utils/loadEventHandlers');
     loadEventHandlers(client);
 })();
 
